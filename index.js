@@ -7,8 +7,6 @@ const PORT = 3000;
 const app = express();
 
 app.get('/', (req, res) => {
-    res.statusCode = 200;
-    res.end('Hello World');
     return res.json({message: 'server is up'});
 });
 
