@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 
 app.get('*', (req, res) => {
-    return res.json({message: 'server is up'});
+    return res.json({message: 'Deploy de uma aplicação usando CI/CD com AWS'});
 });
 
 app.listen(port);
