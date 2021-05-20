@@ -1,13 +1,14 @@
 const express = require('express');
 
-// App
-const app = express();
-const port = process.env.PORT || 3001;
+const app  = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('*', (req, res) => {
-    return res.send('Testando com pull request - Deploy de uma aplicação usando CI/CD com AWS');
+app.use(express.static(__dirname));
+
+app.get('/', (req, res) => {
+    return res.sendFile('view/index.html', {root: __dirname });
 });
 
 app.listen(port);
