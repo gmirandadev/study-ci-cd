@@ -1,11 +1,11 @@
-name: Pull requests on main branch
+name: Push on main branch
 on:
-  pull_request:
+  push:
     branches: [ main ]
 
 jobs:
-  build:
 
+  build:
     runs-on: ubuntu-latest
 
     strategy:
